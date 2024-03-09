@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function verifyName(){
+            var name = document.getElementById('name').value;
+            if(name == ""){
+                alert('Invalid name given');
+                return false;
+            }
+            return true;
+        }
+        function verifyPhone(){
+            var phoneRegex = /^(1\s?)?((\(\d{3}\))|(\d{3}))\-?\s?\d{3}\-?\s?\d{4}$/;
+            var phone = document.getElementById('phoneNumber').value;
+            if (!phoneRegex.test(phone)){
+                alert("Phone number must be valid");
+                return false;
+            }
+            return true;
+        }
+        function verifyEmail(){
+            var emailRegex = /^[^\s@]+@[^\s@]+$/;
+            var email = document.getElementById('email').value;
+            if (!emailRegex.test(email)){
+                alert("Email must be in valid format");
+                return false;
+            }
+            return true;
+        }
+        function verify(){
+            if (verifyName() && verifyPhone() && verifyEmail()){
+                alert("All fields are valid. Submitting form...");
+                document.getElementById("name").value="";
+                document.getElementById("phoneNumber").value="";
+                document.getElementById("email").value="";
+                return true;
+            }else{
+                alert("Check your inputs");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration form - NguyenDaiMinh - 20214965</h1>
+    <p>Name:</p>
+    <input type="text" id="name">
+    <br>
+    <p>Phone Number:</p>
+    <input type="text" id="phoneNumber">
+    <br>
+    <p>Email:</p>
+    <input type="text" id="email">
+    <br>
+    <button type="submit" style="margin: 10px 10px 10px 0px;" onclick="verify()">Submit</button>
+</body>
+</html>

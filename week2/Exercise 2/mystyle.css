@@ -1,0 +1,72 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.left{
+    width: 30%;
+    float: left;
+}
+
+.data {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px 15px;
+}
+
+.right{
+    width: 70%; /* Set the width to fill the remaining space */
+    float: right;
+}
+
+.lefthalf {
+    margin: 10px;
+    width: 45%;
+    float: left;
+}
+
+.righthalf {
+    margin: 10px;
+    width: 45%;
+    float: right;
+}
+
+#school{
+    width: 100%; /* Make the image fill the entire width of its container */
+    height: 250px; 
+}
+
+#avatar {
+    position: relative;
+    left: 20%;
+    transform: translate(-50%, -50%); /* Center the avatar precisely */
+    border-radius: 50%; /* Make the avatar circular */
+    width: 100px;
+    height: 100px; 
+    z-index: 1; /* Ensure the avatar is above the school image */
+}
+
+.option {
+    display: inline-block;
+    text-align: center;
+    border: 0.5px solid black;
+    padding: 8px;
+    margin-block: -1px;
+    font-size: 20px;
+}
+
+.option:hover {
+    color: rgba(18, 198, 225, 0.3);
+    border-bottom: none;
+}
+
+table {
+    position: relative;
+    width: 100%;
+}
+
+.info{
+    margin: 5px;
+}
